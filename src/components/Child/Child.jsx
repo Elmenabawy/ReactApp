@@ -14,6 +14,7 @@ export default class Child extends Component {
                 <h4>product category : {category}</h4>
                 <h4>product count : {count}</h4>
                     <button className='btn btn-outline-danger w-100' onClick={() => this.props.delete(id)}>Delete</button>
+            <button className='btn btn-outline-primary w-100' onClick={() => this.props.update(this.props.productInfo)}>+</button>
                     {onSale? <div className='sale bg-danger text-white position-absolute top-0 end-0 mx-1'>sale </div>:''}
                     
             </div>

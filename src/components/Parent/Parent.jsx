@@ -8,7 +8,7 @@ export default class Parent extends Component {
             name: "Toshipa",
             price: "15200",
             category: "tv",
-            count: "3",
+            count: 3,
             onSale: true,
         },
             {
@@ -16,7 +16,7 @@ export default class Parent extends Component {
                 name: "samsung",
                 price: "15200",
                 category: "tv",
-                count: "3",
+                count: 4,
                 onSale: true,
             },
             {
@@ -24,7 +24,7 @@ export default class Parent extends Component {
                 name: "iphone",
                 price: "15200",
                 category: "tv",
-                count: "3",
+                count: 3,
                 onSale: true,
             },
             {
@@ -32,7 +32,7 @@ export default class Parent extends Component {
                 name: "Toshipa",
                 price: "15200",
                 category: "tv",
-                count: "3",
+                count: 5,
                 onSale: false,
             },
             {
@@ -40,7 +40,7 @@ export default class Parent extends Component {
                 name: "oppo",
                 price: "15200",
                 category: "tv",
-                count: "3",
+                count: 3,
                 onSale: false,
             },
             {
@@ -48,22 +48,36 @@ export default class Parent extends Component {
                 name: "ayhaga",
                 price: "15200",
                 category: "tv",
-                count: "3",
+                count: 7,
                 onSale: true,
             },
     ]
     };
 
     deleteProduct = (id)=> {
-        console.log(id);
+        //deep copy not sahllow copy
+        let myProducts = [...this.state.Products];
+        //update
+        myProducts = myProducts.filter((product)=>product.id !== id);
+        //render
+        this.setState({Products:myProducts});
     };
+
+    updateProduct = (product)=>{
+        //shallow copy
+        let myProducts = [...this.state.Products];  
+        //get the product index
+        let productIndex = myProducts.indexOf(product);
+        myProducts[productIndex].count = myProducts[productIndex].count + 1;
+        this.setState({Products:myProducts})
+    }
  
   render() {
     return (<>
         <div className="container bg-dark py-4 ">
             
             <div className='row g-1'>
-                {this.state.Products.map((product)=> <Child delete={this.deleteProduct} productInfo={product} />)}
+                {this.state.Products.map((product)=> <Child delete={this.deleteProduct} productInfo={product} update={this.updateProduct}/>)}
             </div>
         </div>
     
