@@ -11,6 +11,10 @@ useEffect(()=>{
 
 //component did update (call every update) as the array has the count value
 useEffect(()=>{
+
+    if(count === 0){
+        return
+    }
     console.log("component did update")
 },[count])
     return  (

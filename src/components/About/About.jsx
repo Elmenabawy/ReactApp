@@ -1,14 +1,12 @@
-import React, { Component } from 'react'
+import React, { useContext } from 'react'
+import { CounterContext } from '../../CounterContext'
 
-export default class About extends Component {
-render() {
-    return (
-    <>
-    <div className='bg-danger text-white p-5'>
-            <h3>About</h3>
+export default function About() {
+
+    let x =useContext(CounterContext);
+return (
+    <div className='p-5 bg-info'>
+        <h2>About {x.count}</h2>
     </div>
-        
-    </>
-    )
-}
+)
 }
