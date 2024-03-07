@@ -1,0 +1,24 @@
+.About{
+    background-color: #1ABC9C;
+}
+.About-icon{
+    position:relative
+}
+.About-icon::after{
+    position: absolute;
+    content:"";
+    top: 30%;
+    left: 38%;
+    height: 4px;
+    width: 10%;
+    background-color: #ffff;
+}
+.About-icon::before{
+    position: absolute;
+    content:"";
+    top: 30%;
+    right: 38%;
+    height: 4px;
+    width: 10%;
+    background-color: #ffff;
+}

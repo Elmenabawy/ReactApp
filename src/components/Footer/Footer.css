@@ -1,0 +1,19 @@
+.footer{
+    background-color: #2C3E50 !important;
+}
+
+
+.icon{
+    border-radius: 50%;
+    border: 1px solid;
+    padding: 10px;
+    transition:  all 0.2s  ease;
+}
+.icon:hover{
+    border:1px solid #1ABC9C;
+}
+
+
+.footer-feet{
+    background-color:#1A252f ;
+}
