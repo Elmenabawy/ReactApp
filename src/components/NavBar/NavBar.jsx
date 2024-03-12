@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import './NavBar.css';
+import  './NavBar.css';
 export default class NavBar extends Component {
 render() {
     return (
     <>
-            <nav className="navbar navbar-expand-lg navbar-light bg-dark end-0 start-0 top-0 py-4">
+            <nav className="navbar navbar-expand-lg navbar-light bg-dark end-0 start-0 top-0 py-4 {Style.navbar}">
                 <div className="container ">
                     <Link className="navbar-brand fw-bold text-white" to={"/"}>START FRAMEWORK</Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">

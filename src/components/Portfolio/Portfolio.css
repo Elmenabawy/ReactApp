@@ -1,0 +1,46 @@
+.portfolio-icon{
+    color: black;
+}
+.portfolio-icon{
+    position: relative;
+}
+.portfolio-icon::after{
+    position: absolute;
+    content:"";
+    top: 30%;
+    left: 37%;
+    height: 4px;
+    width: 10%;
+    background-color: #2C3E50;
+}
+.portfolio-icon::before{
+    position: absolute;
+    content:"";
+    top: 30%;
+    right: 37%;
+    height: 4px;
+    width: 10%;
+    background-color: #2C3E50;
+}
+.portfolio-card {
+    position: relative;
+}
+.plus-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom:0;
+    background-color: #1ABC9C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+    opacity: 0;
+    transition: all .3s;
+}
+
+.portfolio-card:hover .plus-overlay{
+    opacity: .8;
+
+}

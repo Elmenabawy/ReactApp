@@ -8,7 +8,7 @@ export default function Home() {
     <header className='header vh-100 d-flex align-items-center justify-content-center text-center'>
         <div>
                     <img src="./images/boy.svg" alt="" className='w-50'/>
-                    <h1 className='text-white fw-bolder my-3'>START  FRAMEWORK</h1>
+                    <h1 className='text-white fw-bolder my-3'>START FRAMEWORK</h1>
                     <div className='header-icon'>
                         <i className="fa-solid fa-star text-white fa-xl"></i>
                     </div>
